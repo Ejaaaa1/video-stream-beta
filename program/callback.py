@@ -178,7 +178,13 @@ async def cbmenu(_, query: CallbackQuery):
           await query.edit_message_text(
               f" **settings of** {query.message.chat.title}\n\n II : Pause Stream\n ▷ : Resume Stream\n 🔇 : Mute Userbot\n🔊 : Unmute Userbot\n ▢ : Stop Stream",
               reply_markup=InlineKeyboardMarkup(
-                  [[
+                 [
+        [
+            InlineKeyboardButton(
+                text=f"{total_time} ─◯───────── {current_time}",
+                callback_data=f"timer_checkup_markup {videoid}|{user_id}",
+            )
+        ], [[
                       InlineKeyboardButton("▢", callback_data="cbstop"),
                       InlineKeyboardButton("II", callback_data="cbpause"),
                       InlineKeyboardButton("▷", callback_data="cbresume"),
