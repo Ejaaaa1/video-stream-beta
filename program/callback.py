@@ -180,9 +180,7 @@ async def cbmenu(_, query: CallbackQuery):
               reply_markup=InlineKeyboardMarkup(
                  
         [
-            InlineKeyboardButton(
-                text=f"{total_time} ─◯───────── {current_time}",
-                callback_data=f"timer_checkup_markup {videoid}|{user_id}",
+           
             )
         ], [[
                       InlineKeyboardButton("▢", callback_data="cbstop"),
