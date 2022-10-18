@@ -181,8 +181,8 @@ async def cbmenu(_, query: CallbackQuery):
                  
         
            
-            )
-        ], [[
+            ))
+        , [[
                       InlineKeyboardButton("▢", callback_data="cbstop"),
                       InlineKeyboardButton("II", callback_data="cbpause"),
                       InlineKeyboardButton("▷", callback_data="cbresume"),
