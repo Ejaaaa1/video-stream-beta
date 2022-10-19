@@ -70,7 +70,7 @@ async def vplay(c: Client, m: Message):
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ .\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ꜰʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+        return await m.reply_text("**ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ .**\n\n» **ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ꜰʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.**")
     try:
         aing = await c.get_me()
     except Exception as e:
@@ -78,28 +78,28 @@ async def vplay(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f" ᴛᴏ ᴜsᴇ ᴍᴇ, ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀ ᴡɪᴛʜ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ᴘᴇʀᴍɪssɪᴏɴs:\n\n» ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs\n» ᴀᴅᴅ ᴜsᴇʀs\n» ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ\n\nᴅᴀᴛᴀ ɪs ᴜᴘᴅᴀᴛᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀꜰᴛᴇʀ ʏᴏᴜ **ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ**"
+            f" **ᴛᴏ ᴜsᴇ ᴍᴇ, ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀ ᴡɪᴛʜ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ᴘᴇʀᴍɪssɪᴏɴs:**\n\n» **ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs**\n» **ᴀᴅᴅ ᴜsᴇʀs**\n» **ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ**\n\n**ᴅᴀᴛᴀ ɪs ᴜᴘᴅᴀᴛᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀꜰᴛᴇʀ ʏᴏᴜ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ:" + "\n\n» ❌  ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ."
+            "**ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ:**" + "\n\n»  **ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ.**"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ:" + "\n\n» ❌ ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs."
+            "**ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ:**" + "\n\n» **ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs.**"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("**ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ:**" + "\n\n» **ᴀᴅᴅ ᴜsᴇʀs**")
         return
     try:
         ubot = (await user.get_me()).id
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} ɪs ʙᴀɴɴᴇᴅ ɪɴ ɢʀᴏᴜᴘ {m.chat.title}\n\n» ᴜɴʙᴀɴ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ꜰɪʀsᴛ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ."
+                f"@{ASSISTANT_NAME} **ɪs ʙᴀɴɴᴇᴅ ɪɴ ɢʀᴏᴜᴘ** {m.chat.title}\n\n» **ᴜɴʙᴀɴ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ꜰɪʀsᴛ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.**"
             )
             return
     except UserNotParticipant:
@@ -107,7 +107,7 @@ async def vplay(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f" ᴜsᴇʀʙᴏᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ\n\n ʀᴇᴀsᴏɴ: `{e}`")
+                await m.reply_text(f"**ᴜsᴇʀʙᴏᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ**\n\n **ʀᴇᴀsᴏɴ:** `{e}`")
                 return
         else:
             try:
@@ -140,7 +140,7 @@ async def vplay(c: Client, m: Message):
                 else:
                     Q = 720
                     await loser.edit(
-                        "» __only 720, 480, 360 allowed__ \n💡 **now streaming video in 720p**"
+                        "» **ᴏɴʟʏ 720, 480, 360 ᴀʟʟᴏᴡᴇᴅ**\n **ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴠɪᴅᴇᴏ ɪɴ 720ᴘ**"
                     )
             try:
                 if replied.video:
@@ -156,7 +156,7 @@ async def vplay(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f" ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ » `{pos}`\n\n ɴᴀᴍᴇ: [{songname}]({link}) | `video`\n ᴄʜᴀᴛ: `{chat_id}`\n ʀᴇǫᴜᴇsᴛ ʙʏ: {requester}",
+                    caption=f"**ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n **ɴᴀᴍᴇ**: [{songname}]({link}) | `video`\n **ᴄʜᴀᴛ:** `{chat_id}`\n **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
                     reply_markup=keyboard,
                 )
             else:
@@ -166,7 +166,7 @@ async def vplay(c: Client, m: Message):
                     amaze = MediumQualityVideo()
                 elif Q == 360:
                     amaze = LowQualityVideo()
-                await loser.edit("🔄 **Joining vc...**")
+                await loser.edit("** ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioVideoPiped(
@@ -181,22 +181,22 @@ async def vplay(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_2}",
-                    caption=f"ɴᴀᴍᴇ: [{songname}]({link})\n ᴄʜᴀᴛ: `{chat_id}`\n💡 sᴛᴀᴛᴜs: ᴘʟᴀʏɪɴɢ\n ʀᴇǫᴜᴇsᴛ ʙʏ: {requester}\n sᴛʀᴇᴀᴍ ᴛʏᴘᴇ: `Video`",
+                    caption=f"**ɴᴀᴍᴇ**: [{songname}]({link})\n **ᴄʜᴀᴛ**: `{chat_id}`\n **sᴛᴀᴛᴜs**: ᴘʟᴀʏɪɴɢ\n **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}\n **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** `Video`",
                     reply_markup=keyboard,
                 )
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ꜰɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ."
+                    "**» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ꜰɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ.**"
                 )
             else:
-                loser = await c.send_message(chat_id, "☠️ sᴇᴀʀᴄʜɪɴɢ...")
+                loser = await c.send_message(chat_id, "**sᴇᴀʀᴄʜɪɴɢ...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 720
                 amaze = HighQualityVideo()
                 if search == 0:
-                    await loser.edit("❌ **no results found.**")
+                    await loser.edit("**ɴᴏ ʀᴇsᴜʟᴛs ꜰᴏᴜɴᴅ.**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -209,7 +209,7 @@ async def vplay(c: Client, m: Message):
                     image = await thumb(thumbnail, title, userid, ctitle)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
-                        await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
+                        await loser.edit(f"**ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
                             pos = add_to_queue(
@@ -219,12 +219,12 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {requester}",
+                                caption=f" **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n ** ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n ** ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
                             try:
-                                await loser.edit("🔄 **Joining vc...**")
+                                await loser.edit("**ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioVideoPiped(
@@ -239,26 +239,26 @@ async def vplay(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=image,
-                                    caption=f"🏷 **Name:** [{songname}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}\n📹 **Stream type:** `Video`",
+                                    caption=f" ** ɴᴀᴍᴇ:** [{songname}]({url})\n **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n **sᴛᴀᴛᴜs:** `Playing`\n **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}\n **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** `Video`",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
                                 await loser.delete()
-                                await m.reply_text(f"🚫 error: `{ep}`")
+                                await m.reply_text(f" **ᴇʀʀᴏʀ:** `{ep}`")
 
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **video file** or **give something to search.**"
+                " **» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ꜰɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ.**"
             )
         else:
-            loser = await c.send_message(chat_id, "🔍 **Searching...**")
+            loser = await c.send_message(chat_id, " **sᴇᴀʀᴄʜɪɴɢ...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
             amaze = HighQualityVideo()
             if search == 0:
-                await loser.edit("❌ **no results found.**")
+                await loser.edit(" **ɴᴏ ʀᴇsᴜʟᴛs ꜰᴏᴜɴᴅ.**")
             else:
                 songname = search[0]
                 title = search[0]
@@ -271,7 +271,7 @@ async def vplay(c: Client, m: Message):
                 image = await thumb(thumbnail, title, userid, ctitle)
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
-                    await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
+                    await loser.edit(f" ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
@@ -281,12 +281,12 @@ async def vplay(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=image,
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {requester}",
+                            caption=f" **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n **ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n **ʀᴇǫᴜᴇsᴛ ʙʏ :** {requester}",
                             reply_markup=keyboard,
                         )
                     else:
                         try:
-                            await loser.edit("🔄 **Joining vc...**")
+                            await loser.edit(" **ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioVideoPiped(
@@ -301,12 +301,12 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"🏷 **Name:** [{songname}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}\n📹 **Stream type:** `Video`",
+                                caption=f" **ɴᴀᴍᴇ :** [{songname}]({url})\n **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n ** sᴛᴀᴛᴜs :** `Playing`\n **ʀᴇǫᴜᴇsᴛ ʙʏ :** {requester}\n **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :** `Video`",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
                             await loser.delete()
-                            await m.reply_text(f"🚫 error: `{ep}`")
+                            await m.reply_text(f" ᴇʀʀᴏʀ: `{ep}`")
 
 
 @Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & other_filters)
@@ -316,42 +316,42 @@ async def vstream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton(text="• ᴍᴇɴᴜ •", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• ᴄʟᴏsᴇ •", callback_data="cls"),
             ]
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights.")
+        return await m.reply_text("**ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !**\n\n» **ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ꜰʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.**")
     try:
         aing = await c.get_me()
     except Exception as e:
-        return await m.reply_text(f"error:\n\n{e}")
+        return await m.reply_text(f"ᴇʀʀᴏʀ:\n\n{e}")
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f" ᴛᴏ ᴜsᴇ ᴍᴇ, ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ **ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀ** ᴡɪᴛʜ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ **ᴘᴇʀᴍɪssɪᴏɴs**:\n\n»  __ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs__\n»  __ᴀᴅᴅ ᴜsᴇʀs__\n»  __ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ__\n\n **ᴅᴀᴛᴀ ɪs ᴜᴘᴅᴀᴛᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀꜰᴛᴇʀ ʏᴏᴜ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ.**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ :" + "\n\n»  __ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ :" + "\n\n»  __ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("ᴍɪssɪɴɢ ʀᴇǫᴜɪʀᴇᴅ ᴘᴇʀᴍɪssɪᴏɴ :" + "\n\n»  __ᴀᴅᴅ ᴜsᴇʀs__")
         return
     try:
         ubot = (await user.get_me()).id
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} **is banned in group** {m.chat.title}\n\n» **unban the userbot first if you want to use this bot.**"
+                f"@{ASSISTANT_NAME} **ɪs ʙᴀɴɴᴇᴅ ɪɴ ɢʀᴏᴜᴘ** {m.chat.title}\n\n» **ᴜɴʙᴀɴ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ꜰɪʀsᴛ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ..**"
             )
             return
     except UserNotParticipant:
@@ -359,7 +359,7 @@ async def vstream(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"❌ **userbot failed to join**\n\n**reason**: `{e}`")
+                await m.reply_text(f" **ᴜsᴇʀʙᴏᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ**\n\n**ʀᴇᴀsᴏɴ**: `{e}`")
                 return
         else:
             try:
@@ -375,16 +375,16 @@ async def vstream(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
+                    f" **ᴜsᴇʀʙᴏᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ**\n\n**ʀᴇᴀsᴏɴ**: `{e}`"
                 )
 
     if len(m.command) < 2:
-        await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
+        await m.reply("**» ɢɪᴠᴇ ᴍᴇ ᴀ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ.**")
     else:
         if len(m.command) == 2:
             link = m.text.split(None, 1)[1]
             Q = 720
-            loser = await c.send_message(chat_id, "🔄 **processing stream...**")
+            loser = await c.send_message(chat_id, " **ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ...**")
         elif len(m.command) == 3:
             op = m.text.split(None, 1)[1]
             link = op.split(None, 1)[0]
@@ -394,9 +394,9 @@ async def vstream(c: Client, m: Message):
             else:
                 Q = 720
                 await m.reply(
-                    "» __only 720, 480, 360 allowed__ \n💡 **now streaming video in 720p**"
+                    "» __ᴏɴʟʏ 720, 480, 360 ᴀʟʟᴏᴡᴇᴅ__ \n **ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴠɪᴅᴇᴏ ɪɴ 720ᴘ**"
                 )
-            loser = await c.send_message(chat_id, "🔄 **processing stream...**")
+            loser = await c.send_message(chat_id, " **ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ...**")
         else:
             await m.reply("**/vstream {link} {720/480/360}**")
 
@@ -409,7 +409,7 @@ async def vstream(c: Client, m: Message):
             veez = 1
 
         if veez == 0:
-            await loser.edit(f"❌ yt-dl issues detected\n\n» `{livelink}`")
+            await loser.edit(f" ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{livelink}`")
         else:
             if chat_id in QUEUE:
                 pos = add_to_queue(chat_id, "Live Stream", livelink, link, "Video", Q)
@@ -417,7 +417,7 @@ async def vstream(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
+                    caption=f" **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n **ᴄʜᴀᴛ :** `{chat_id}`\n **ʀᴇǫᴜᴇsᴛ ʙʏ :** {requester}",
                     reply_markup=keyboard,
                 )
             else:
@@ -428,7 +428,7 @@ async def vstream(c: Client, m: Message):
                 elif Q == 360:
                     amaze = LowQualityVideo()
                 try:
-                    await loser.edit("🔄 **Joining vc...**")
+                    await loser.edit(" **ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ ...**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
@@ -445,9 +445,9 @@ async def vstream(c: Client, m: Message):
                     )
                     await m.reply_photo(
                         photo=f"{IMG_2}",
-                        caption=f"💡 **[Video live]({link}) stream started.**\n\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                        caption=f" **[Video live]({link}) sᴛʀᴇᴀᴍ sᴛᴀʀᴛᴇᴅ.**\n\n **ᴄʜᴀᴛ :** `{chat_id}`\n **sᴛᴀᴛᴜs :** `Playing`\n **ʀᴇǫᴜᴇsᴛ ʙʏ :** {requester}",
                         reply_markup=keyboard,
                     )
                 except Exception as ep:
                     await loser.delete()
-                    await m.reply_text(f"🚫 error: `{ep}`")
+                    await m.reply_text(f" ᴇʀʀᴏʀ : `{ep}`")
